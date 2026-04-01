@@ -1,6 +1,6 @@
 {
   "name": "nuxtblog-plugin-reading-time",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "在文章渲染时自动计算并注入阅读时间提示",
   "author": "nuxtblog",
   "license": "MIT",
