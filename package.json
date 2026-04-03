@@ -1,6 +1,6 @@
 {
   "name": "nuxtblog-plugin-reading-time",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "在文章渲染时自动计算并注入阅读时间提示",
   "author": "nuxtblog",
   "license": "MIT",
@@ -13,7 +13,10 @@
   "plugin": {
     "title": "阅读时间",
     "icon": "i-tabler-clock",
-    "entry": "index.js",
+    "sdkVersion": "0.1.0",
+    "trust_level": "official",
+    "entry": "dist/index.js",
+    "activationEvents": ["onEvent:content.*"],
     "capabilities": {},
     "settings": [
       {
@@ -71,12 +74,12 @@
     ]
   },
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=neutral --main-fields=browser,module,main --target=es2015 --outfile=index.js",
-    "build:watch": "esbuild src/index.ts --bundle --platform=neutral --main-fields=browser,module,main --target=es2015 --outfile=index.js --watch",
+    "build": "esbuild src/index.ts --bundle --platform=neutral --format=cjs --main-fields=browser,module,main --target=es2015 --outfile=dist/index.js",
+    "build:watch": "esbuild src/index.ts --bundle --platform=neutral --format=cjs --main-fields=browser,module,main --target=es2015 --outfile=dist/index.js --watch",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@nuxtblog/plugin-sdk": "^0.0.4",
+    "@nuxtblog/plugin-sdk": "^0.1.0",
     "esbuild": "^0.27.4",
     "typescript": "^6.0.2"
   }
