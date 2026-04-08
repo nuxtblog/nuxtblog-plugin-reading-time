@@ -1,6 +1,6 @@
 id: nuxtblog-plugin-reading-time
 title: 阅读时间
-version: 2.0.0
+version: 2.0.1
 icon: i-tabler-clock
 author: nuxtblog
 description: 在文章渲染时自动计算并注入阅读时间提示
